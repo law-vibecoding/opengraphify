@@ -1,6 +1,6 @@
-# OpenGraphify — Claude Code Plugin
+# OpenGraphify — Deterministic Code Intelligence Plugin
 
-OpenGraphify is the public cataloging layer of Planerting3d: a deterministic **Claude Code** plugin for native AST cataloging, structural graph exploration, and 3D architecture visualization. Its goal is to turn a codebase into a reproducible structural map with low context overhead, without requiring a model call for every inspection.
+OpenGraphify is the public cataloging layer of Planerting3d: an agent-agnostic deterministic plugin for **Claude Code, Codex, and other compatible coding agents**. It provides native AST cataloging, structural graph exploration, and 3D architecture visualization. Its goal is to turn a codebase into a reproducible structural map with low context overhead, without requiring a model call for every inspection.
 
 ## Project scope
 
@@ -18,7 +18,11 @@ It reduces unnecessary token consumption and cognitive guesswork by delegating s
 - `/planerting-catalog [path]` -- Scan the repository with the supported AST readers and compile `planerting3d.architecture.json`.
 - `/planerting-3d` -- Open the interactive spatial explorer in a browser.
 
-## Installation in Claude Code
+## Agent integrations
+
+The deterministic scripts and skills are shared across agents. The repository includes manifests for Claude Code and Codex; other agents can use the same `scripts/`, `skills/`, and canonical graph contract through their native plugin or extension format.
+
+### Claude Code
 
 ### Option 1: Use directly in a repository
 Copy `commands/`, `skills/`, and `scripts/` into your project's `.claude/` directory.
@@ -27,6 +31,10 @@ Copy `commands/`, `skills/`, and `scripts/` into your project's `.claude/` direc
 ```bash
 claude plugin install ./opengraphify
 ```
+
+### Codex
+
+Use the `.codex-plugin/plugin.json` manifest and expose the same `skills/` and `scripts/` directories through the Codex plugin installation flow.
 
 ## Local execution
 
@@ -71,7 +79,8 @@ Small contributions are welcome: a parser, fixture, measurement, path fix, or do
 
 ## Repository structure
 
-- `.claude-plugin/` — plugin manifest.
+- `.claude-plugin/` — Claude Code plugin manifest.
+- `.codex-plugin/` — Codex plugin manifest.
 - `commands/` — Claude Code slash commands.
 - `skills/` — operational instructions for structural cataloging.
 - `scripts/` — cataloger and 3D explorer.
