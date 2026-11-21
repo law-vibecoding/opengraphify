@@ -6,7 +6,7 @@
 
 ## 1. Scope
 
-OpenGraphify converts a source tree into a reproducible architecture map for Claude Code. It focuses on structural facts that can be extracted locally: files, symbols, imports, connections, layers, and spatial coordinates.
+OpenGraphify converts a source tree into a reproducible architecture map for Claude Code, Codex, and other compatible coding agents. It focuses on structural facts that can be extracted locally: files, symbols, imports, connections, layers, and spatial coordinates.
 
 The shared `opengraphify-core` layer is intended to provide AST primitives, hashes, cache, contracts, paths, file identity, and a canonical graph format. The `opengraphify` layer consumes that foundation to catalog architecture and render the 3D explorer.
 
