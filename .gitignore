@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+planerting3d.architecture.json
+guards_report.json
+planerting3d_benchmark_report.json
+planerting3d_explorer.html
+*.log
+.opengraphify-report/
