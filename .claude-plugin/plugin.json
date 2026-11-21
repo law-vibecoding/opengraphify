@@ -1,7 +1,7 @@
 {
   "name": "opengraphify",
   "version": "1.0.0",
-  "description": "Deterministic AST cataloging, code topology, graph exploration, and 3D architecture visualization.",
+  "description": "Agent-agnostic deterministic AST cataloging, code topology, graph exploration, and 3D architecture visualization.",
   "author": {
     "name": "Renato Carvalho / Gemini Spark"
   }
